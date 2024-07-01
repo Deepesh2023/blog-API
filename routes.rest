@@ -11,7 +11,7 @@ POST http://localhost:3000/api/blogs
 Content-Type: application/json
 
 {
-    "content": "test"
+    "content": "njan oru sambhavam thanne"
 }
 
 ###
@@ -30,5 +30,9 @@ Content-Type: application/json
 
 ###
 # delete a blog
-DELETE http://localhost:3000/api/blogs/66823e177125a0eab1df7802
+DELETE http://localhost:3000/api/blogs/66824a05cea1221aab2b8d90
 
+
+###
+# invalid url
+GET http://localhost:3000/api/wrongurl
