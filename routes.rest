@@ -1,4 +1,4 @@
-GET http://localhost:3000/
+GET http://localhost:3000/api
 
 ###
 
@@ -10,5 +10,5 @@ POST http://localhost:3000/api/blogs
 Content-Type: application/json
 
 {
-    "content": "third blog"
+    "content": "test"
 }
