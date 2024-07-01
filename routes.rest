@@ -16,7 +16,17 @@ Content-Type: application/json
 
 ###
 # get a specific blog
-GET http://localhost:3000/api/blogs/6682317db24106685a97fd2b
+GET http://localhost:3000/api/blogs/6682453c2acc31cee6e28913
+
+
+###
+# update a specific blog
+PUT http://localhost:3000/api/blogs/6682453c2acc31cee6e28913
+Content-Type: application/json
+
+{
+    "content": "update test"
+}
 
 ###
 # delete a blog
