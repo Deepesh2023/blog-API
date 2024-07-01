@@ -1,14 +1,24 @@
+# homepage
 GET http://localhost:3000/api
 
 ###
-
+# get all blogs
 GET http://localhost:3000/api/blogs
 
 ###
-
+# post a blog
 POST http://localhost:3000/api/blogs
 Content-Type: application/json
 
 {
     "content": "test"
 }
+
+###
+# get a specific blog
+GET http://localhost:3000/api/blogs/6682317db24106685a97fd2b
+
+###
+# delete a blog
+DELETE http://localhost:3000/api/blogs/66823e177125a0eab1df7802
+

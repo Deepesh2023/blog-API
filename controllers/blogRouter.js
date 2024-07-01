@@ -8,10 +8,22 @@ blogRouter.get("/blogs", async (request, response) => {
   response.json(blogs);
 });
 
+blogRouter.get("/blogs/:id", async (request, response) => {
+  const id = request.params.id;
+  response.json(blog);
+});
+
 blogRouter.post("/blogs", async (request, response) => {
   const newBlog = new Blog(request.body);
   await newBlog.save();
   response.status(201).end();
+});
+
+blogRouter.delete("/blogs/:id", async (request, response) => {
+  const id = request.params.id;
+  const deletedBlog = await Blog.findOneAndDelete({ _id: id });
+  response.status(204);
+  response.send(deletedBlog);
 });
 
 module.exports = blogRouter;
