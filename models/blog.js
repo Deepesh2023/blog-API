@@ -6,6 +6,7 @@ const url = process.env.MONGODB_URL;
 mongoose.connect(url);
 
 const blogSchema = new mongoose.Schema({
+  title: String,
   content: String,
 });
 
