@@ -40,10 +40,10 @@ blogRouter.put("/blogs/:id", async (request, response) => {
 blogRouter.delete("/blogs/:id", async (request, response) => {
   const id = request.params.id;
   try {
-    const deletedBlog = await Blog.findOneAndDelete({ _id: id });
+    const deletedBlog = await Blog.findByIdAndDelete({ _id: id });
     response.status(200).send(deletedBlog);
   } catch (error) {
-    response.status(400).end()
+    response.status(400).end();
   }
 });
 
