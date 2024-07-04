@@ -1,7 +1,9 @@
 const blogRouter = require("express").Router();
 const Blog = require("../models/blog");
 
-blogRouter.get("/", (request, response) => response.send("<h1>Blogs</h1>"));
+blogRouter.get("/index.html", (request, response) =>
+  response.status(200).end()
+);
 
 blogRouter.get("/blogs", async (request, response) => {
   const blogs = await Blog.find();
@@ -23,7 +25,9 @@ blogRouter.post("/blogs", async (request, response) => {
 blogRouter.put("/blogs/:id", async (request, response) => {
   const updatedBlog = request.body;
   const id = request.params.id;
-  const blog = await Blog.findByIdAndUpdate({ _id: id }, updatedBlog, {new: true});
+  const blog = await Blog.findByIdAndUpdate({ _id: id }, updatedBlog, {
+    new: true,
+  });
   response.send(blog);
 });
 
