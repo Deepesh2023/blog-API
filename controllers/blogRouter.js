@@ -23,7 +23,7 @@ blogRouter.post("/blogs", async (request, response) => {
 blogRouter.put("/blogs/:id", async (request, response) => {
   const updatedBlog = request.body;
   const id = request.params.id;
-  const blog = await Blog.findOneAndUpdate({ _id: id }, updatedBlog);
+  const blog = await Blog.findByIdAndUpdate({ _id: id }, updatedBlog, {new: true});
   response.send(blog);
 });
 
