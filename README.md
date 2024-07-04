@@ -6,6 +6,8 @@ Technologies used: Node JS, MongoDB, svelte
 
 Inspired from [this](https://roadmap.sh/backend/project-ideas#1-personal-blogging-platform-api) article.
 
+Here's the [front-end](https://github.com/Deepesh2023/blog-API-frontend) repo
+
 ## Lessons learnt:
 
 - how to handle routes
